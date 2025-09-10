@@ -10,8 +10,9 @@ RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/g
 RUN apt-get update -y && \
     apt-get install gh -y
 RUN apt-get install python3 python3-pip -y
-RUN python3 -m venv .venv
-RUN source .venv/bin/activate
+RUN apt-get install python3.12-venv
+RUN python3 -m venv venv
+RUN source venv/bin/activate
 RUN pip install -r requirements.txt
 RUN echo "ubuntu ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/ubuntu
 
