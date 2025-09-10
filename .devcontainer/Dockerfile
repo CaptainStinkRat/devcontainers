@@ -14,8 +14,6 @@ RUN apt-get update -y && \
 
 RUN echo "ubuntu ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/ubuntu
 
- # Add our onCreateCommand script.
-ADD on-create.sh /on-create.sh
 # Switch to the non-root user.
 USER ubuntu
 ENTRYPOINT ["bash"]
