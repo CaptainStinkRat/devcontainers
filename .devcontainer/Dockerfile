@@ -10,7 +10,10 @@ RUN curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | g
 RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | tee /etc/apt/sources.list.d/github-cli.list > /dev/null
 RUN apt-get update -y && \
     apt-get install gh -y
-
+RUN apt-get install python3 python3-pip -y
+RUN python3 -m venv .venv
+RUN source .venv/bin/activate
+RUN pip install -r requirements.txt
 RUN echo "ubuntu ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/ubuntu
 
 # Switch to the non-root user.
