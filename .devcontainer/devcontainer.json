@@ -3,6 +3,6 @@
     "dockerfile": "Dockerfile"
   },
   "features": {
-    "ghcr.io/meaningful-ooo/devcontainer-features/fish": "2"
+    "ghcr.io/meaningful-ooo/devcontainer-features/fish"
   }
 }
