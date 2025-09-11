@@ -3,6 +3,8 @@
     "dockerfile": "Dockerfile"
   },
   "features": {
-    "ghcr.io/meaningful-ooo/devcontainer-features/fish:2" : {}
+    "ghcr.io/meaningful-ooo/devcontainer-features/fish:2" : {},
+    "ghcr.io/guiyomh/features/vim:1" : {},
+    "ghcr.io/jsburckhardt/devcontainer-features/bat:1" : {}
   }
 }
