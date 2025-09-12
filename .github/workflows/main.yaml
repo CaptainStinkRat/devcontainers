@@ -15,6 +15,7 @@ jobs:
         with:
           devcontainerPath: .devcontainer
           imageName: devcontainerdryrun
+          push: captainstinkrat/devcontainerdryrun
       - name : Devcontainer dry run
         run : echo "Dry run succesful"
   devcontainerScriptBuilding:
