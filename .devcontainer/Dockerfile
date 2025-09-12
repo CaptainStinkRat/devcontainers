@@ -2,6 +2,7 @@
 #pipeline test
 FROM ubuntu:noble
 # installing baseline configuration needs
+# git pipeline test 2
 RUN apt-get update && apt-get install -y sudo
 RUN apt-get update && apt-get install -y \
      ca-certificates \
