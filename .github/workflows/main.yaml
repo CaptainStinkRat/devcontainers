@@ -14,5 +14,22 @@ jobs:
         uses: devcontainers/ci@v0.3
         with:
           devcontainerPath: .devcontainer
+          imageName: devContainerDryRun
       - name : Devcontainer dry run
         run : echo "Dry run succesful"
+  devcontainerScriptBuilding:
+    runs-on: ubuntu-latest
+    needs: devcontainerDryRun
+    steps:
+      - name: Running commands in Dev Container
+        uses: devcontainers/ci/actions/container-run@v0.3
+        with:
+          imageName: devContainerDryRun
+          runArgs: |
+            -v ${{ github.workspace }}:/workspace
+          command: |
+            
+            python3 -m venv venv
+            source venv/bin/activate
+            pip install -r /workspace/devcontainers/requirements.txt && python3 /workspace/devcontainers/test.py
+      
