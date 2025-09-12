@@ -13,7 +13,7 @@ RUN echo "ubuntu ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/ubuntu
 # installing python3 for dev test
 RUN apt-get install python3 -y 
 RUN apt-get install python3.12-venv -y
-
+#test for git pipeline
 # Switch to the non-root user.
 USER ubuntu
 ENTRYPOINT ["bash"]
