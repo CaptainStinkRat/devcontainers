@@ -14,7 +14,7 @@ jobs:
         uses: devcontainers/ci@v0.3
         with:
           devcontainerPath: .devcontainer
-          imageName: devContainerDryRun
+          imageName: devcontainerdryrun
       - name : Devcontainer dry run
         run : echo "Dry run succesful"
   devcontainerScriptBuilding:
@@ -24,7 +24,7 @@ jobs:
       - name: Running commands in Dev Container
         uses: devcontainers/ci/actions/container-run@v0.3
         with:
-          imageName: devContainerDryRun
+          imageName: devcontainerdryrun
           runArgs: |
             -v ${{ github.workspace }}:/workspace
           command: |
