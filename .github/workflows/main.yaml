@@ -38,7 +38,8 @@ jobs:
     if: success()
     steps:
       - name: Running commands in Dev Container
-        uses: devcontainers/ci/actions/container-run@v0.3
+      - uses: actions/checkout@v4
+      - uses: devcontainers/ci/build-and-run@v1
         with:
           imageName: captainstinkrat/devcontainerdryrun
           runArgs: |
