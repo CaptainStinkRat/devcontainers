@@ -1,4 +1,4 @@
-# base image pull
+# base image pull and start
 FROM ubuntu:noble
 # installing baseline configuration needs
 RUN apt-get update && apt-get install -y sudo
