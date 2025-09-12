@@ -38,7 +38,7 @@ jobs:
       - name: Running commands in Dev Container
         uses: devcontainers/ci/actions/container-run@v0.3
         with:
-          imageName: devcontainerdryrun
+          imageName: captainstinkrat/devcontainerdryrun
           runArgs: |
             -v ${{ github.workspace }}:/workspace
           command: |
