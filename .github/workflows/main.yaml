@@ -3,7 +3,7 @@ name: devcontainer tester
 on:
   push:
     paths:
-      - '/.devcontainer/**.json'
+      - '.devcontainer/**.json'
 jobs:
   devcontainerDryRun:
     runs-on: ubuntu-latest
