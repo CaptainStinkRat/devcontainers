@@ -10,6 +10,11 @@ jobs:
     container:
       image: ghcr.io/coder/envbuilder:latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout devcontainer.json
+        uses: actions/checkout@v4
+      - name: Build and run dev container
+        uses: devcontainers/ci@v0.3
+        with:
+          devcontainerPath: .devcontainer
       - name : Devcontainer dry run
         run : echo "Dry run succesful"
