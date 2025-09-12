@@ -37,7 +37,6 @@ jobs:
     needs: devcontainerDryRun
     if: success()
     steps:
-      - name: Running commands in Dev Container
       - uses: actions/checkout@v4
       - uses: devcontainers/ci/build-and-run@v1
         with:
