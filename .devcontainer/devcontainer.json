@@ -7,7 +7,8 @@
     "ghcr.io/jungaretti/features/vim:1" : {},
     "ghcr.io/jsburckhardt/devcontainer-features/bat:1" : {},
     "ghcr.io/devcontainers/features/docker-in-docker:2" : {},
-    "ghcr.io/lukewiwa/features/shellcheck:0" : {}
+    "ghcr.io/lukewiwa/features/shellcheck:0" : {},
+    "ghcr.io/devcontainers-extra/features/neofetch:1" : {}
   },
   "postCreateCommand":"chsh -s \"$(which fish)\" && fish -c \"fisher install IlanCosman/tide@v5\""
 }
