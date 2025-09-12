@@ -47,6 +47,6 @@ jobs:
         uses: devcontainers/ci@v0.3
         with:
           devcontainerPath: .devcontainer
-          imageName : ${{ needs.devcontainerDryRun.outputs.image_name }}
+          imageName : captainstinkrat/devcontainerdryrun
           push: always
       
