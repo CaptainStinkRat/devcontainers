@@ -1,4 +1,5 @@
 # base image pull and start
+#pipeline test
 FROM ubuntu:noble
 # installing baseline configuration needs
 RUN apt-get update && apt-get install -y sudo
