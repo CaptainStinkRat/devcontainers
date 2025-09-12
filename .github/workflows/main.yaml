@@ -38,7 +38,7 @@ jobs:
     if: success()
     steps:
       - uses: actions/checkout@v4
-      - uses: devcontainers/ci/build-and-run@v1
+      - uses: devcontainers/ci/actions/build-and-run@v1
         with:
           imageName: captainstinkrat/devcontainerdryrun
           runArgs: |
