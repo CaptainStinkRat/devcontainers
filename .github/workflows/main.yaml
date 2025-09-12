@@ -8,7 +8,7 @@ jobs:
   devcontainerDryRun:
     runs-on: ubuntu-latest
     outputs:
-      image_name : ${{ setps.prepare_meta.outputs.image_name }}
+      image_name : ${{ steps.prepare_meta.outputs.image_name }}
     steps:
       - name: Checkout devcontainer.json
         uses: actions/checkout@v4
