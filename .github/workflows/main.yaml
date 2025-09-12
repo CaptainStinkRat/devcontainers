@@ -7,8 +7,6 @@ on:
 jobs:
   devcontainerDryRun:
     runs-on: ubuntu-latest
-    container:
-      image: ghcr.io/coder/envbuilder:latest
     steps:
       - name: Checkout devcontainer.json
         uses: actions/checkout@v4
